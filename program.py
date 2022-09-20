@@ -1,13 +1,15 @@
 #1
+n1=int(input(" "))
+n2=int(input(" "))
 def suma_nr(a,b):
     c=a+b
-    return 
-    print("Suma numerelor este: ",c)
+    return c
+print("Suma numerelor este: ",suma(n1,n2)
 
 #2
 def produsul_nr(a,b):
     d=a*b
-    return 
+    return d
     print(" Produsul numerelor este: ",d)
 
 #3
