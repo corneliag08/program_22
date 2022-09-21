@@ -1,79 +1,67 @@
-#1
-n1=int(input(" "))
-n2=int(input(" "))
-def suma_nr(a,b):
-    c=a+b
-    return c
-print("Suma numerelor este: ",suma(n1,n2)
+a=int(input('Introduceti primul nr: '))
+b=int(input('Introduceti al doilea nr: '))
+c=int(input('Introduceti al treilea nr :'))
+def cel_mm_div_com(x,y,z):
+    m=[]
+    n=[]
+    q=[]
+    for i in range (1,x+1):
+        if (x%i==0):
+            m.append(i)
+    for j in range (1,y+1):
+        if (y%j==0):
+            n.append(j)
+    for k in range (1,z+1):
+        if (y%k==0):
+            q.append(k)        
+    h=set(m).intersection(n)
+    d=set(h).intersection(q)
+    l=max(d)
+    return (l)
+print( "Cel mai mare divizor comun al numerelor este: ",cel_mm_div_com(a,b,c))
 
-#2
-def produsul_nr(a,b):
-    d=a*b
-    return d
-    print(" Produsul numerelor este: ",d)
 
-#3
-def media_aritm(a,b):
-    e=(a+b)/2
-    return
-    print("Media aritmetica acestor numere este: ",e)
-
-#4
-def cel_mm_div_com(a,b):
-    ad=[]
-    bd=[]
-    for i in range (1,a+1):
-        if (a%i==0):
-            ad.append(i)
-    for j in range (1,b+1):
-        if (b%j==0):
-            bd.append(j)
-    c=set(ad).intersection(bd)
-    l=max(c)
-    return 
-    print( "Cel mai mare divizor comun al numerelor este: ",l)
-
-#5
-def cel_mmic_mult_com(a,b):
-    if a>b:
-        multiplu=a
-    elif b>a:
-        multiplu=b
-    else:
-        multiplu=a
+def cel_mmic_mult_com(x,y,z):
+    if x>y and x>z:
+        multiplu=x
+    elif b>a and b>c:
+        multiplu=y
+    elif z>x and z>y:
+        multiplu=z
+    
     while True:
-        if ((multiplu%a==0)and(multiplu%b==0)):
+        if ((multiplu%x==0)and(multiplu%y==0)and (multiplu%z==0)):
             cel_mmic=multiplu
             break
         multiplu +=1
-    return 
-    print(" Cel mai mic multiplu comun al numerelor este: ",cel_mmic)
+    return (multiplu)
+print(" Cel mai mic multiplu comun al numerelor este: ",cel_mmic_mult_com(a,b,c))
 
-#6
-def minim(a,b):
-    if a<b:
-        return print(" Numarul minim este: ",a)
-    else:
-        return print(" Numarul minim este: ",b)
 
-#7
-def maxim(a,b):
-    if a>b:
-        return print(" Numarul maxim este: ",a)
-    else:
-        return print(" Numarul maxim este: ",b)
+def minim(x,y,z):
+    return min([x,y,z])
+print ("Numarul minim este:",minim(a,b,c))
 
-#8
-def suma_n():
-    a= int(input('Dati primul numar: '))
-    b= int(input('Dati al doilea numar: '))
-    c=a+b
-    return print(a," + ",b," = ",c)
 
-#9
-def produs_nedef():
-    a= int(input('Dati primul numar: '))
-    b= int(input('Dati al doilea numar: '))
-    c=a*b
-    return print(a," * ",b," = ",c)
-    
+def maxim(x,y,z):
+    return max([x,y,z])
+print ("Numarul minim este:",maxim(a,b,c))
+
+def divizorii_comuni(x,y,z):
+    m=[]
+    n=[]
+    q=[]
+    for i in range (1,x+1):
+        if (x%i==0):
+            m.append(i)
+    for j in range (1,y+1):
+        if (y%j==0):
+            n.append(j)
+    for k in range (1,z+1):
+        if (z%k==0):
+            q.append(i)
+    h=set(m).intersection(n)
+    l=set(h).intersection(q)
+    br=list(l)
+    return (br)
+print("Toti divizorii comuni ai numerelor sunt :" , divizorii_comuni(a,b,c))
