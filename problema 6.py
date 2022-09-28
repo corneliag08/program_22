@@ -1,4 +1,9 @@
 import math
+x=int(input("Dati primul nr: "))
+y=int(input("Dati al doilea nr: "))
+z=int(input("Dati al treilea nr: "))
+q=int(input("Dati al patrulea  nr: "))
+
 
 
 def triunghiuri(a,b,c,d):
@@ -24,11 +29,6 @@ def triunghiuri(a,b,c,d):
         return print(a,',',c,',',d, "pot forma un triunghi și perimetrul acestuia este: ",p,", iar aria este: ",aria)
     else:
         print("Numerele date nu pot fi laturi ale unui triunghi")
-
-x=int(input("Dati I-ul nr: "))
-y=int(input("Dati II-a nr: "))
-z=int(input("Dati III-a nr: "))
-q=int(input("Dati IV-a nr: "))
 
 
 (triunghiuri(x,y,z,q))
