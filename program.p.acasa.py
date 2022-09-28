@@ -1,6 +1,7 @@
 a=int(input('Introduceti primul nr: '))
 b=int(input('Introduceti al doilea nr: '))
 c=int(input('Introduceti al treilea nr :'))
+
 def cel_mm_div_com(x,y,z):
     m=[]
     n=[]
@@ -38,14 +39,23 @@ def cel_mmic_mult_com(x,y,z):
 print(" Cel mai mic multiplu comun al numerelor este: ",cel_mmic_mult_com(a,b,c))
 
 
-def minim(x,y,z):
-    return min([x,y,z])
-print ("Numarul minim este:",minim(a,b,c))
+def max(x,y,z):
+    l=[x,y,z]
+    max=0
+    for numar in l:
+        if numar>max:
+            max = numar
+    return max
 
+def min(x,y,z):
+    l=[x,y,z]
+    min=a
+    for numar in l:
+        if numar<min:
+            min = numar
+    return min
+print ("Сel mai mic nr este :", min(a,b,c) , ",iar cel mai mare nr este :" , max(a,b,c))
 
-def maxim(x,y,z):
-    return max([x,y,z])
-print ("Numarul minim este:",maxim(a,b,c))
 
 def divizorii_comuni(x,y,z):
     m=[]
